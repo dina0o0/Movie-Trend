@@ -1,0 +1,47 @@
+@import "../Styles/Variable";
+@import "../Styles/Placeholder";
+
+footer {
+  background: url(../Assets/Image/Footer.png) center/cover no-repeat;
+  background-position: 0 100%;
+  padding: 5.3125rem 0 5rem;
+  .row {
+    align-items: center;
+    img {
+      width: 75%;
+    }
+    p {
+      font: 400 1rem OpenSansR;
+      color: #ffffff;
+    }
+  }
+
+  .row {
+    .group-icon {
+      @extend %center;
+      color: #ffffff;
+      margin: 30px 0 0 0;
+
+      font: {
+        size: 1.6875rem;
+        weight: 400;
+      }
+
+      i {
+        margin: 0 1.4375rem 0 0;
+        transition: all 0.5s;
+        cursor: pointer;
+      }
+
+      .fa-facebook-f:hover {
+        color: #1877f2;
+      }
+      .fa-x-twitter:hover {
+        color: #1da1f2;
+      }
+      .fa-instagram:hover {
+        color: #e1306c;
+      }
+    }
+  }
+}

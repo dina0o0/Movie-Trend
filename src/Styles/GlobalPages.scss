@@ -1,0 +1,192 @@
+@import "../Styles/Placeholder";
+  .search-container {
+    margin: 120px 0 40px;
+
+    .search-input-container {
+      @extend %center;
+      input {
+        padding: 10px 25px;
+        border-radius: 15px;
+        border: 3px solid #a9a9a9;
+        width: 50%;
+        font: 600 13px OpenSansR;
+        &::placeholder {
+          color: #a9a9a9;
+        }
+        &:focus {
+          outline-color: #fe1f20;
+          border: 3px solid #fe1f20;
+        }
+      } 
+    }
+
+    // .search-suggestions {
+    //   position: absolute;
+    //   background: white;
+    //   border: 1px solid #ddd;
+    //   border: none;
+    //   box-shadow: 3px 3px 12px #000000;
+    //   width: 98.5%;
+    //   text-align: center;
+    //   scrollbar-color: #fe1f20 transparent;
+    //   scrollbar-width: thin;
+    //   max-height: 350px;
+    //   overflow-y: auto;
+    //   z-index: 7;
+
+    // .search-suggestion {
+    //   display: flex;
+    //   font: 500 1.0625rem OpenSansR;
+    //   align-items: center;
+    //   margin: 10px;
+    //   &:hover,
+    //   &.highlighted {
+    //     background-color: #f0f0f0;
+    //   }
+    //   .suggestion-image {
+    //     width: 40px;
+    //     height: auto;
+    //     margin-right: 10px;
+    //     border-radius: 4px;
+    //   }
+
+    //   .suggestion-title {
+    //     font-size: 0.875rem;
+    //   }
+    // }
+    // }
+  }
+  .content-media {
+    margin: 0 0 25px;
+    .row {
+      @extend %center;
+      img {
+        width: 100%;
+        border-radius: 18px;
+        box-shadow: 3px 3px 12px #000000;
+      }
+      .no-result {
+        text-align: center;
+        height: 60vh;
+        @extend %center;
+        img {
+          width: 40%;
+          height: auto;
+          border-radius: 18px;
+          box-shadow: none;
+          margin: 0 0 8px;
+        }
+        p {
+          font: 400 1.25rem OpenSansR;
+          color: #000;
+        }
+      }
+      .media-info {
+        position: relative;
+        .media-rating {
+          position: absolute;
+          top: 8px;
+          left: 77%;
+          background-color: #fe1f20;
+          border-radius: 50%;
+          width: 32px;
+          height: 32px;
+          color: #ffffff;
+          @extend %center;
+          font: 500 14px OpenSansR;
+          z-index: 6;
+        }
+      }
+
+      .image-link {
+        position: relative;
+        .overlay {
+          position: absolute;
+          overflow: hidden;
+          top: 0%;
+          left: 0;
+          width: 100%;
+          height: 98.5%;
+          border-radius: 17px;
+          background-color: rgba(0, 0, 0, 0.8);
+          opacity: 0;
+          transition: opacity 0.5s ease-in-out;
+          z-index: 6;
+          .details {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+          .name-item {
+            position: absolute;
+            bottom: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+            width: 100%;
+            font: 500 16px OpenSansR;
+            color: #ffffff;
+          }
+        }
+        &:hover .overlay {
+          opacity: 1;
+        }
+
+        &:hover .details {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+/* الإعلامات الإعلامية */
+@media (max-width: 768px) {
+  .name-item {
+    gap: 0.3em; /* مسافة أصغر بين الكلمات للشاشات الصغيرة */
+  }
+}
+
+@media (max-width: 480px) {
+  .name-item {
+    gap: 0.2em; /* مسافة أصغر بين الكلمات للشاشات الصغيرة جدا */
+  }
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  margin: 40px 0;
+  li {
+    margin: 0 5px;
+  }
+  a {
+    padding: 13px 18px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    color: #000000;
+    text-decoration: none;
+    font: 400 15px OpenSansR;
+    cursor: pointer;
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+}
+
+.pagination .active a {
+  background-color: #fe1f20;
+  color: white;
+  border: 1px solid #fe1f20;
+}
+
+.pagination .disabled a {
+  color: #ccc;
+  cursor: not-allowed;
+}
+.Layout {
+  @extend %center;
+  background-color: #ffffff;
+  height: 100vh;
+}

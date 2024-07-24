@@ -1,0 +1,136 @@
+@import "../Styles/Placeholder";
+
+.swiper-pagination-bullet {
+  padding: 17px;
+  background-color: #010508 !important;
+  opacity: 0.6 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: #fe1f20 !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination {
+  font-size: 1.25rem;
+  color: #ffffff;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: #fe1f20 !important;
+  font-size: 70px !important;
+  font-weight: 700;
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  left: 400px !important;
+  bottom: 25px !important;
+  width: 0 !important;
+}
+
+.group-swiper {
+  position: relative;
+  .text-swiper {
+    position: absolute;
+    text-align: left;
+    top: 209px;
+    left: 300px;
+
+    h1 {
+      font: 700 2.5rem RalewayEB;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      color: #ffffff;
+      span {
+        color: #fe1f20;
+      }
+    }
+
+    p {
+      font: 500 1.125rem OpenSansR;
+      text-transform: capitalize;
+      margin-bottom: 22px;
+      color: #ffffff;
+    }
+  }
+}
+
+h2 {
+  font: 700 1.875rem RalewayEB;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  text-align: center;
+  position: relative;
+  &:after {
+    content: "";
+    padding: 1.6px;
+    width: 50px;
+    background: #fe1f20;
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin: 0 0 32px 0;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 1.125rem;
+  background: #fff;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Celebrities {
+  margin: 0;
+}
+
+@media (max-width: 576px) {
+  .group-swiper {
+    position: relative;
+    .text-swiper {
+      top: 9px;
+      left: 300px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .group-swiper {
+    position: relative;
+    .text-swiper {
+      top: 9px;
+      left: 20px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 1200px) {
+}

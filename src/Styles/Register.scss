@@ -1,0 +1,204 @@
+@import "../Styles/Variable";
+@import "../Styles/Placeholder";
+header {
+  .slideShow {
+    background: url(../Assets/Image/SpiderMan.jpg) 50% 50% / cover;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0 0 60px 0;
+    .layer {
+      background: $layer;
+      @extend %center;
+      height: 100vh;
+      .content {
+        text-align: center;
+        h1 {
+          font: 700 2.6875rem RalewayB;
+          margin: 0 0 17px 0;
+          text-transform: capitalize;
+          color: $white;
+        }
+        p {
+          font: 400 1.25rem OpenSansR;
+          margin: 0 0 17px 0;
+          line-height: 1.5;
+          color: $white;
+        }
+        button {
+          padding: 1.25rem 2.875rem;
+          border: 0.125rem solid $white;
+          background: transparent;
+          border-radius: 0.625rem;
+          text-transform: uppercase;
+          letter-spacing: 0.0938rem;
+          cursor: pointer;
+          font: 700 0.875rem OpenSansR;
+          transition: all 0.5s;
+          color: $white;
+          &:hover {
+            background-color: $white;
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+
+  .container {
+    .row {
+      justify-content: center;
+      align-items: center;
+      margin: 0 0 60px 0;
+      figcaption {
+        p {
+          font: 400 1.5625rem OpenSansR;
+          color: $black;
+        }
+      }
+      figure {
+        img {
+          width: 100%;
+          border-radius: 15px;
+        }
+      }
+      article {
+        h3 {
+          text-align: center;
+          font: 400 1.75rem OpenSansR;
+          margin: 0 0 15px 0;
+        }
+      }
+      video {
+        border-radius: 50px;
+      }
+    }
+  }
+}
+
+.container {
+  position: relative;
+
+  form {
+    .errorStyle {
+      background: #d33131;
+      font: 400 1.125rem OpenSansR;
+      border-radius: 7px;
+      margin: 5px 0 5px 0;
+      padding: 8px;
+    }
+    .titleFormRegister {
+      font: 600 1.5625rem RalewayB;
+      text-transform: capitalize;
+      padding: 0 0 20px 0;
+      letter-spacing: 1px;
+      color: #3e5f74;
+    }
+    .titleLabelRegister {
+      font: 400 1.0625rem openSansB;
+      text-transform: capitalize;
+      color: #3e5f74;
+    }
+    .inputStyleRegister {
+      width: 100%;
+      margin: 0 0 5px 0;
+      padding: 10px 10px 10px 10px;
+      border-radius: 7px;
+      border: 0.125rem solid #808d8e;
+      outline: none;
+      font: 400 .9375rem OpenSansR;
+      &:focus {
+        border: 3px solid #354a5f;
+      }
+    }
+    .registerBtn {
+      padding: 12px 30px;
+      margin: 10px 0;
+      border: 2px solid #354a5f;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 0.0938rem;
+      cursor: pointer;
+      font: 600 0.875rem OpenSansR;
+      transition: all 0.5s;
+      color: #354a5f;
+      &:disabled {
+        border-color: #808d8e;
+        color: #808d8e;
+        cursor: not-allowed;
+      }
+      &:enabled {
+        background: #354a5f;
+        color: $white;
+      }
+    }
+  }
+
+  .closeIcon {
+    position: absolute;
+    color: red;
+    top: -40px;
+    right: 2px;
+    font-size: 2.1875rem;
+    cursor: pointer;
+  }
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  height: 356px;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 220%;
+    background-color: rgba(235, 53, 131, 0.7);
+    top: -50%;
+    left: -100%;
+    z-index: 1;
+    transform: rotate(25deg);
+    transform-origin: center top 0;
+    transition: 0.5s;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+  }
+  .card-text {
+    width: 100%;
+    padding: 0 20px;
+    position: absolute;
+    top: -100%;
+    color: #fff;
+    left: 0;
+    z-index: 2;
+    transition: 1.1s;
+    h3 {
+      font: 600 1.125rem ralewayR;
+      text-transform: uppercase;
+      margin: 0 0 8px 0;
+    }
+    p {
+      font: 400 .9375rem OpenSansR;
+      text-transform: capitalize;
+      margin: 0 0 8px 0;
+    }
+  }
+  &:hover .card-text {
+    top: 80px;
+  }
+}
+
+.card:hover::before {
+  left: 10%;
+}
+
+// .custom-modal {
+//   background-color: red;
+
+//   overflow-y: auto; /* التحكم في السلوك العمودي للتمرير */
+//   scrollbar-width: thin; /* سمر على متصفحات تدعم */
+//   scrollbar-color: red #f0f0f0; 
+// }

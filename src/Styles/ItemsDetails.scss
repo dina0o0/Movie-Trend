@@ -1,0 +1,41 @@
+@import "./Placeholder";
+
+.item-details {
+  margin: 130px 0 25px;
+  .row {
+    text-align: center;
+    img {
+      width: 350px;
+      border-radius: 8px;
+      margin: 0 0 16px 0;
+      box-shadow: 3px 3px 12px #000000;
+    }
+    p,
+    h4 {
+      font: 500 1.0625rem OpenSansR;
+      text-transform: capitalize;
+      margin: 0 0 8px;
+    }
+    h4 {
+      font-weight: 700;
+    }
+    p {
+      line-height: 1.5em;
+    }
+  }
+  .read-more-btn {
+    background: #fe1f20;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    font: 500 1rem OpenSansR;
+    text-transform: capitalize;
+
+    &:hover {
+      background: #cb1819;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import "../Styles/Variable";
+@import "../Styles/Placeholder";
+
+section {
+  @extend %center;
+  height: 100vh;
+  text-align: center;
+
+  figure {
+    img {
+      width: 40%;
+      margin: 0 0 0.9375rem 0;
+    }
+
+    h1 {
+      font: 800 1.875rem RalewayEB;
+    }
+  }
+}
+
+.dark {
+  section {
+    background-color: $darkBg;
+    color: $brightBg
+  }
+}

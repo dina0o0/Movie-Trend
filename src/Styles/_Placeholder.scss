@@ -1,0 +1,24 @@
+%center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%position {
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 0;
+}
+
+%alignCenter {
+  display: flex;
+  align-items: center;
+}
+
+%boxShadowRed {
+  box-shadow: 1px 1px 20px 0 #d33131;
+}
+%boxShadowBlack {
+  box-shadow: 7px 7px 20px 0 rgba(0, 0, 0, 0.4);
+}

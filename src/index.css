@@ -1,0 +1,106 @@
+/* @import "../src/Styles/Variable"; */
+:root {
+  --main_color: #fe1f20;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+[data-theme="dark"] {
+  --main_color: green;
+
+}
+
+html,
+body {
+  background: #ffffff;
+  scrollbar-width: none;
+  /* سمك التمرير على متصفحات تدعم */
+  scrollbar-color: #333333 #f0f0f0;
+
+  @media screen and (max-width: 575px) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 576px) and (max-width: 991px) {
+    font-size: 17px;
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1200px) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 1200px) and (max-width: 1440px) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: 1440px) {
+    font-size: 16px;
+  }
+
+
+}
+
+/* // .dark {
+//   background-color: #dcdde1;
+// } */
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+/* ::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+} */
+
+@font-face {
+  font-family: OpenSansR;
+  src: url(./Assets/Font/OpenSans/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: OpenSansB;
+  src: url(./Assets/Font/OpenSans/OpenSans-Bold.ttf);
+}
+
+@font-face {
+  font-family: RalewayR;
+  src: url(./Assets/Font/Raleway/Raleway-Regular.ttf);
+}
+
+@font-face {
+  font-family: RalewayB;
+  src: url(./Assets/Font/Raleway/Raleway-Bold.ttf);
+}
+
+@font-face {
+  font-family: RalewayEB;
+  src: url(./Assets/Font/Raleway/Raleway-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: RalewaySB;
+  src: url(./Assets/Font/Raleway/Raleway-SemiBold.ttf);
+}
+
+.LayOut {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f3f8;
+  height: 100vh;
+}
+
+/* // .dark {
+//   background-color: #dcdde1;
+
+//   .LayOut {
+//     background-color: #282828;
+//   }
+// } */
